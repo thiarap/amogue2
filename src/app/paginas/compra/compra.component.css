@@ -1,0 +1,72 @@
+/* CONTENEDOR GENERAL */
+.container {
+  max-width: 900px;
+  margin: 30px auto;
+}
+
+/* TÍTULO PRINCIPAL */
+h2 {
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+/* CARD PRINCIPAL */
+.card {
+  border-radius: 8px;
+  border: 1px solid #ddd;
+}
+
+/* LABELS DEL FORMULARIO */
+.form-label {
+  font-weight: 500;
+}
+
+/* INPUTS Y SELECTS */
+input.form-control,
+select.form-select {
+  border-radius: 6px;
+}
+
+/* GRUPO DE INPUT CON ICONO */
+.input-group-text {
+  border-radius: 6px 0 0 6px;
+}
+
+/* BOTÓN PRINCIPAL */
+button.btn-primary {
+  min-width: 180px;
+}
+
+/* MODAL PDF */
+.modal.show.d-block {
+  display: block;
+}
+
+/* Centrado vertical del modal */
+.modal-dialog {
+  margin-top: 40px;
+}
+
+/* Ajustes del iframe del PDF */
+.modal-body iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+/* Footer del modal */
+.modal-footer {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+}
+
+/* Mensajes de error debajo de los campos */
+.form-text.text-danger {
+  font-size: 0.85rem;
+}
+
+/* Resumen de totales */
+.resumen-total {
+  text-align: right;
+}

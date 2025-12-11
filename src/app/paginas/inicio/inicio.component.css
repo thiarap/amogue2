@@ -1,0 +1,166 @@
+.fondo {
+  background-color: #f7ebdd;
+}
+
+body {
+  margin: 0;
+  background-color: #f7ebdd;
+  letter-spacing: 1px;
+}
+
+header {
+  text-align: center;
+  padding: 1px 0 20px;
+  font-size: 30px;
+  letter-spacing: 1px;
+  font-family: 'Playfair Display', serif;
+  color: #483528;
+}
+
+.gallery {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  padding: 40px;
+  flex-wrap: wrap;
+  margin: 20px auto;
+}
+
+.gallery img {
+  width: auto;
+  height: 260px;
+  margin: 20px auto;
+}
+
+@media screen and (max-width: 768px) {
+  .gallery {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+.gallery img {
+  width: 90%;
+
+}
+
+/* CARRUSEL*/
+.carousel {
+  width: 100vw;
+  height: 450px;
+  margin: 0;
+  position: relative;
+  overflow: hidden;
+  border-radius: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  background: transparent !important;
+  /* 💥 sin fondo */
+}
+
+/* Ocultar radio buttons */
+.carousel input {
+  display: none;
+}
+
+/* Contenedor de slides */
+.slides {
+  display: flex;
+  width: 300%;
+  height: 100%;
+  transition: margin-left 0.8s ease;
+}
+
+/* Slide */
+.slide {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  position: relative;
+  background: transparent !important;
+  /* 💥 sin fondo */
+}
+
+/* Imagen izquierda */
+.slide img {
+  width: 60%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Texto derecha – MISMA POSICIÓN, MISMA FUENTE, SIN FONDO */
+.text {
+  width: 40%;
+  padding: 60px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  font-family: "Georgia", serif;
+  background: transparent !important;
+  /* 💥 sin fondo */
+  color: black;
+  /* o cambiá el color que quieras */
+}
+
+.text h1 {
+  font-size: 42px;
+  margin: 0;
+}
+
+
+
+/* Movimiento */
+#slide1:checked~.slides {
+  margin-left: 0;
+}
+
+#slide2:checked~.slides {
+  margin-left: -100%;
+}
+
+#slide3:checked~.slides {
+  margin-left: -200%;
+}
+
+/* Botones */
+.controls {
+  position: absolute;
+  bottom: 20px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.controls label {
+  width: 12px;
+  height: 12px;
+  border: 2px solid #000;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+/*boton de wpp*/
+.whatsapp-btn {
+    position: fixed;
+    bottom: 20px;      /* distancia desde abajo */
+    right: 20px;       /* distancia desde la derecha */
+    background: #ffffff;
+    color: #25D366;    /* color verde WhatsApp */
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 30px;
+    border: 2px solid #ddd;      /* borde suave */
+    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+    z-index: 999;
+    transition: 0.3s ease;
+}
+
+.whatsapp-btn:hover {
+    transform: scale(1.1);
+    box-shadow: 0 6px 14px rgba(0,0,0,0.25);
+}

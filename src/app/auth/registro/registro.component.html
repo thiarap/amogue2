@@ -1,0 +1,81 @@
+<!-- Contenedor general centrado -->
+<div style="display: flex; justify-content: center; margin-top: 40px;">
+  <!-- Caja principal con el diseño moderno -->
+  <form class="form" (ngSubmit)="registrar()">
+
+    <p id="heading">Registrarse</p>
+
+    <!-- Nombre -->
+    <div class="field">
+      <svg class="input-icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+        fill="currentColor" viewBox="0 0 16 16">
+        <path
+          d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H3zm5-6a3 3 0 1 0-0.001-6.001A3 3 0 0 0 8 8z" />
+      </svg>
+
+      <input
+        type="text"
+        placeholder="Nombre completo"
+        class="input-field"
+        name="nombre"
+        [(ngModel)]="nuevoUsuario.nombre"
+        required
+      />
+    </div>
+
+    <!-- Email -->
+    <div class="field">
+      <svg class="input-icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+        fill="currentColor" viewBox="0 0 16 16">
+        <path
+          d="M0 4a2 2 0 012-2h12a2 2 0 012 2v8a2 2 0 01-2 2H2a2 2 0 01-2-2V4zm13.5-.5L8 8 2.5 3.5h11z" />
+      </svg>
+
+      <input
+        type="email"
+        placeholder="Correo electrónico"
+        class="input-field"
+        name="email"
+        [(ngModel)]="nuevoUsuario.email"
+        required
+      />
+    </div>
+
+    <!-- Password -->
+    <div class="field">
+      <svg class="input-icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+        fill="currentColor" viewBox="0 0 16 16">
+        <path
+          d="M8 1a2 2 0 012 2v4H6V3a2 2 0 012-2zm3 6V3a3 3 0 00-6 0v4a2 2 0 00-2 2v5a2 2 0 002 2h6a2 2 0 002-2V9a2 2 0 00-2-2z" />
+      </svg>
+
+      <input
+        type="password"
+        placeholder="Contraseña"
+        class="input-field"
+        name="password"
+        minlength="4"
+        [(ngModel)]="nuevoUsuario.password"
+        required
+      />
+    </div>
+
+    <!-- Botón registrar -->
+    <div class="btn">
+      <button type="submit" class="button1">Crear cuenta</button>
+    </div>
+
+    <!-- Mensaje de error -->
+    <p
+      *ngIf="error"
+      style="color: #ff6b6b; text-align: center; margin-top: 10px;"
+    >
+      {{ error }}
+    </p>
+
+    <!-- Ir a login -->
+    <button class="button3" href="/inicio-sesion">
+      ¿Ya tenés cuenta? Iniciá sesión
+    </button>
+  </form>
+</div>

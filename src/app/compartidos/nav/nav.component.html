@@ -1,0 +1,78 @@
+<nav class="navbar navbar-expand-lg amouge-nav">
+  <div class="container-fluid">
+
+    <!-- LOGO -->
+    <a routerLink="/inicio" class="navbar-brand d-flex align-items-center">
+      <img src="/imagenes/logo.jpg" class="logo-img" width="80px" height="70px">
+    </a>
+
+    <!-- Botón responsive -->
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+      aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <!-- CONTENIDO -->
+    <div class="collapse navbar-collapse" id="navbarNav">
+
+      <!-- LINKS -->
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+
+        <li class="nav-item">
+          <a routerLink="/inicio" routerLinkActive="active" class="nav-link">INICIO</a>
+        </li>
+
+        <li class="nav-item">
+          <a routerLink="/productos" routerLinkActive="active" class="nav-link">PRODUCTOS</a>
+        </li>
+
+        <li class="nav-item">
+          <a routerLink="/novedades" routerLinkActive="active" class="nav-link">NOVEDADES</a>
+        </li>
+
+        <li class="nav-item">
+          <a routerLink="/nosotros" routerLinkActive="active" class="nav-link">NUESTRA EMPRESA</a>
+        </li>
+
+        <li class="nav-item">
+          <a routerLink="/contacto" routerLinkActive="active" class="nav-link">CONTACTO</a>
+        </li>
+
+      </ul>
+
+      <!-- DERECHA -->
+      <div class="d-flex align-items-center">
+
+        <!-- ICONO CARRITO (solo si NO es admin) -->
+        <a *ngIf="usuario?.rol !== 'admin'"
+           routerLink="/carrito"
+           routerLinkActive="active"
+           class="neu-button">
+          <i class="bi bi-cart"></i>
+          <span>{{ cantidadProductos }}</span>
+        </a>
+
+        <!-- SI ESTÁ LOGUEADO -->
+        <ng-container *ngIf="authService.isLoggedIn(); else sinSesion">
+          <a class="neu-button" *ngIf="usuario?.rol === 'admin'" routerLink="/admin" routerLinkActive="active">
+            Admin
+          </a>
+
+          <button class="btn btn-sm btn-logout" (click)="logout()">
+            <i class="bi bi-person-fill-slash"></i>
+          </button>
+        </ng-container>
+
+        <!-- SI NO ESTÁ LOGUEADO -->
+        <ng-template #sinSesion>
+          <a routerLink="/login" class="neu-button">Iniciar sesión</a>
+
+          <button routerLink="/register" class="neu-button">
+            <i class="bi bi-person-circle"></i>
+          </button>
+        </ng-template>
+
+      </div>
+    </div>
+  </div>
+</nav>

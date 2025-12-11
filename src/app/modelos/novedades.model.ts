@@ -1,0 +1,10 @@
+export interface Novedades {
+  id: number;
+  nombre: string;
+  descripcion: string;
+  precio: number;
+  imagen: string;
+  stock: number;            // agregado
+  disponibilidad?: boolean; //  calculada desde stock
+  cantidad?: number;        //  carrito
+}

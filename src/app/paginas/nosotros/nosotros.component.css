@@ -1,0 +1,126 @@
+.fondo{
+    background-color: #f7ebdd;
+}
+
+.header {
+    text-align: center;
+    padding: 1px 0 20px;
+    font-size: 40px;
+    letter-spacing: 0.5 px;
+    font-family: 'Playfair Display', serif;
+    color: #483528;
+  
+}
+.nosotros-section {
+  width: 100%;
+  background:#f7ebdd;  /* crema suave */
+  padding: 10px 0; /*para q este pegado al nav*/
+  text-align: center;
+  font-family: "Georgia", serif;
+}
+
+/* CONTENEDOR PRINCIPAL */
+.contenido-nosotros {
+  max-width: 1200px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 40px;
+  align-items: center;
+}
+
+/* IMÁGENES */
+.contenido-nosotros img {
+  width: 100%;
+  height: 500px;
+}
+
+/* TEXTO CENTRAL */
+.texto-centro h3 {
+  font-size: 40px;
+  color: #3B2A21;
+  margin-bottom: 20px;
+}
+
+.texto-centro p {
+  font-size: 24px;
+  line-height: 1.4;
+  color: #3B2A21;
+}
+
+/* RESPONSIVE */
+@media (max-width: 982px) {
+
+  .contenido-nosotros {
+    grid-template-columns: 1fr;
+  }
+
+  .contenido-nosotros img {
+    height: 380px;
+  }
+
+  .texto-centro h3 {
+    font-size: 32px;
+  }
+}
+
+/*PARTE DE NUESTRA HISTORIA*/
+
+.historia-section {
+  width: 100%;
+  padding: 60px 0 80px;
+  text-align: center;
+  font-family: "Georgia", serif;
+}
+
+/* Título */
+.titulo-historia {
+  font-size: 32px;
+  color: #3B2A21;
+  margin-bottom: 5px;
+}
+
+/* Subtítulo */
+.subtitulo-historia {
+  font-size: 24px;
+  color: #3B2A21;
+  margin-bottom: 35px;
+}
+
+/* Texto */
+.historia-texto {
+  max-width: 900px;
+  margin: auto;
+  font-size: 21px;
+  line-height: 1.6;
+  color: #3B2A21;
+}
+
+.historia-texto p {
+  margin-bottom: 25px;
+}
+
+.whatsapp-btn {
+    position: fixed;
+    bottom: 20px;      /* distancia desde abajo */
+    right: 20px;       /* distancia desde la derecha */
+    background: #ffffff;
+    color: #25D366;    /* color verde WhatsApp */
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 30px;
+    border: 2px solid #ddd;      /* borde suave */
+    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+    z-index: 999;
+    transition: 0.3s ease;
+}
+
+.whatsapp-btn:hover {
+    transform: scale(1.1);
+    box-shadow: 0 6px 14px rgba(0,0,0,0.25);
+}
+

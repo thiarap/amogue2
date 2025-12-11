@@ -1,0 +1,132 @@
+.fondo{
+  background: #f5e8d8;
+}
+
+.admin-wrapper {
+  width: 100%;
+  max-width: 900px;
+  margin: auto;
+  padding: 30px;
+  background: #f5e8d8;
+}
+
+/* TÍTULOS */
+.titulo-admin {
+  text-align: center;
+  font-size: 38px;
+  margin-bottom: 30px;
+  font-family: "Georgia", serif;
+  font-weight: 600;
+  color: #4a3728;
+}
+
+.titulo-form {
+  margin-top: 50px;
+  text-align: center;
+  font-size: 28px;
+  font-family: "Georgia", serif;
+  color: #4a3728;
+}
+
+
+/* ESTILO NEUMÓRFICO GENERAL */
+.btn-neumo,
+.btn-neumo-sm {
+  background: #e8e8e8;
+  border-radius: 25px;
+  border: none;
+  padding: 12px 30px;
+  font-size: 16px;
+  cursor: pointer;
+  font-weight: 600;
+  box-shadow: 4px 4px 10px #bfbfbf, -4px -4px 10px #ffffff;
+  transition: 0.2s;
+}
+
+.btn-neumo-sm {
+  padding: 8px 20px;
+  margin-bottom: 8px;
+}
+
+.btn-neumo:hover,
+.btn-neumo-sm:hover {
+  transform: scale(1.05);
+}
+
+/* TABLA */
+.tabla-wrapper {
+  overflow-x: auto;
+  margin-top: 20px;
+}
+
+.tabla-amouage {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: center;
+  background: transparent;
+  border: 3px solid #2f2923;
+}
+
+.tabla-amouage th {
+  font-family: "Georgia", serif;
+  font-size: 18px;
+  padding: 15px;
+  border-bottom: 3px solid #2f2923;
+}
+
+.tabla-amouage td {
+  border-bottom: 2px solid #2f2923;
+  padding: 20px;
+  vertical-align: middle;
+}
+
+/* IMÁGENES */
+.tabla-img {
+  width: 140px;
+  height: 140px;
+  object-fit: cover;
+}
+
+/* NOMBRE */
+.nombre-columna {
+  font-size: 18px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* ACCIONES */
+.acciones-col {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  align-items: center;
+}
+
+/* FORMULARIO */
+.form-amouage {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.input-amouage {
+  padding: 13px;
+  border: none;
+  border-radius: 10px;
+  font-size: 15px;
+  background: #ffffff;
+  box-shadow: inset 2px 2px 6px #bdbdbd, inset -2px -2px 6px #ffffff;
+}
+
+.form-botones {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.preview img {
+  margin-top: 10px;
+  max-width: 170px;
+  border-radius: 10px;
+}

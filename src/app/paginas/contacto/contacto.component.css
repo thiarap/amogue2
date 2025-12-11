@@ -1,0 +1,119 @@
+.fondo{
+     background-color: #f7ebdd;
+}
+.imagen{
+ width: auto; /*alto*/
+ height: 163px; /*ancho*/
+}
+
+ .contact-container {
+  padding: 20px 0;
+  text-align: center;
+  font-family: 'Playfair Display', serif;
+}
+
+
+.subtitulo {
+  font-size: 28px;
+  margin-bottom: 40px;
+  color: #2C2C3A;
+}
+ /*pARTE DEL FORMULARIO*/
+.form-container {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  margin: 0 auto 60px auto;
+  gap: 25px;
+}
+
+.form-group {
+  text-align: left;
+}
+
+label {
+  font-size: 20px;
+  margin-bottom: 8px;
+  display: block;
+}
+
+input,
+textarea {
+  width: 100%;
+  padding: 15px;
+  border: 1px solid #999;
+  border-radius: 5px;
+  font-size: 18px;
+}
+
+textarea {
+  height: 120px;
+}
+
+/*texto*/
+.offices {
+  margin-top: 50px;
+  display: flex; /*para q este horizontal todo el texto*/
+  justify-content: center;
+  gap: 50px;
+}
+
+.office {
+  width: 25%;
+  text-align: center;
+}
+
+.office h3 {
+  font-size: 22px;
+  margin-bottom: 15px;
+  color: black;
+}
+
+/*boton*/
+.btn-enviar {
+    background-color: #a67c52;     /* tono dorado suave */
+    color: white;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 30px;
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    letter-spacing: 0.5px;
+}
+
+.btn-enviar:hover {
+    background-color: #8f6a45;
+    transform: scale(1.05);
+}
+
+.btn-enviar:active {
+    transform: scale(0.97);
+}
+
+/*boton de wpp*/
+.whatsapp-btn {
+    position: fixed;
+    bottom: 20px;      /* distancia desde abajo */
+    right: 20px;       /* distancia desde la derecha */
+    background: #ffffff;
+    color: #25D366;    /* color verde WhatsApp */
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 30px;
+    border: 2px solid #ddd;      /* borde suave */
+    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+    z-index: 999;
+    transition: 0.3s ease;
+}
+
+.whatsapp-btn:hover {
+    transform: scale(1.1);
+    box-shadow: 0 6px 14px rgba(0,0,0,0.25);
+}
+

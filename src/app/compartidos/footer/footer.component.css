@@ -1,0 +1,64 @@
+.footer {
+    width: 100%;
+    background: #ffffff;
+    padding: 50px 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: "Georgia", serif;
+}
+
+/* Columna izquierda */
+.footer-left {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.footer-logo {
+    width: 90px;
+}
+
+.footer-contact {
+    font-size: 18px;
+    line-height: 1.6;
+    margin-bottom: 1px;
+}
+
+.footer-contact i {
+    margin-right: 8px;
+}
+
+/* Columna centro */
+.footer-center {
+    text-align: center;
+    flex: 1;
+}
+
+.footer-center h2 {
+    font-size: 32px;
+    margin-bottom: 55px;
+}
+
+.footer-subtitle {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.footer-social {
+    font-size: 18px;
+    margin-top: 10px;
+}
+
+.footer-social p {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    justify-content: center;
+    margin: 6px 0;
+}
+
+.footer-social i {
+    font-size: 20px;
+}
+

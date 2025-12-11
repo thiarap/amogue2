@@ -1,0 +1,85 @@
+.fondo {
+  background-color: #f7ebdd;
+}
+
+header {
+  text-align: center;
+  padding: 1px 0 20px;
+  font-size: 30px;
+  letter-spacing: 1px;
+  font-family: 'Playfair Display', serif;
+  color: #483528;
+}
+
+.productos-container {
+  text-align: center;
+  padding: 20px;
+}
+
+.buscador {
+  margin-bottom: 20px;
+}
+
+.buscador input {
+  padding: 8px;
+  width: 250px;
+  margin-right: 10px;
+}
+
+.productos-lista {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.producto-card {
+  width: 250px;
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  padding: 15px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  background-color: white;
+}
+
+.producto-imagen {
+  width: auto;
+  height: auto;
+  object-fit: contain;
+  margin-bottom: 10px;
+}
+
+.precio {
+  font-weight: bold;
+  color: #333;
+}
+
+.disponible {
+  color: green;
+}
+
+.no-disponible {
+  color: red;
+}
+
+
+/*boton del carrito*/
+button {
+  color: #090909;
+  padding: 0.7em 1.7em;
+  font-size: 18px;
+  border-radius: 0.5em;
+  background: #e7d2dd;
+  cursor: pointer;
+  border: 1px solid #e8e8e8;
+  transition: all 0.3s;
+  box-shadow: 6px 6px 12px #c5c5c5, -6px -6px 12px #ffffff;
+}
+
+button:hover {
+  border: 1px solid white;
+}
+
+button:active {
+  box-shadow: 4px 4px 12px #c5c5c5, -4px -4px 12px #ffffff;
+}
