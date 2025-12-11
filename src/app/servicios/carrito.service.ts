@@ -67,7 +67,7 @@ export class CarritoService {
   // ===============================================================
   // AGREGAR PRODUCTO AL CARRITO
   // ===============================================================
-  agregarAlCarrito(producto: any): Observable<any> {
+  agregarACarrito(producto: any): Observable<any> {
 
     // POST /carrito/agregar
     return this.http.post<any>(

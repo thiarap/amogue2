@@ -48,14 +48,14 @@ export class ProductosComponent implements OnInit {
   // Método para agregar un producto al carrito
   // ===================================================
 
-  agregarAlCarrito(producto: Producto): void {
+  agregarAlCarrito(producto:Producto): void {
     const token = localStorage.getItem('token');
     if (!token) {
       alert('Debes iniciar sesión para agregar productos al carrito.');
       return;
     }
 
-    this.carritoService.agregarAlCarrito(this.producto).subscribe({
+    this.carritoService.agregarACarrito(producto).subscribe({
       next: () => {
         alert(`Producto "${this.producto}" agregado al carrito ✅`);
       },

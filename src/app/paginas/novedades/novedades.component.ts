@@ -13,7 +13,7 @@ import { Novedades } from '../../modelos/novedades.model';
   styleUrl: './novedades.component.css'
 })
 export class NovedadesComponent implements OnInit {
-  novedadess: Novedades[] = [];
+  producto: Producto[] = [];
   cargando = true;
   error = '';
 
@@ -26,10 +26,13 @@ export class NovedadesComponent implements OnInit {
     this.cargarProductos();
   }
 
+  // ===================================================
+  // Cargar productos desde el backend
+  // ===================================================
   cargarProductos(): void {
     this.productService.obtenerProductos().subscribe({
       next: (res: any) => {
-        this.novedadess = res;
+        this.producto = res;
         this.cargando = false;
       },
       error: (err: any) => {
@@ -40,7 +43,31 @@ export class NovedadesComponent implements OnInit {
     });
   }
 
+  // ===================================================
+  // Método para agregar un producto al carrito
+  // ===================================================
 
+  agregarAlCarrito(producto:Producto): void {
+    const token = localStorage.getItem('token');
+    if (!token) {
+      alert('Debes iniciar sesión para agregar productos al carrito.');
+      return;
+    }
+
+    this.carritoService.agregarACarrito(producto).subscribe({
+      next: () => {
+        alert(`Producto "${this.producto}" agregado al carrito ✅`);
+      },
+      error: (err: any) => {
+        console.error('Error agregando al carrito:', err);
+        if (err.status === 403) {
+          alert('No autorizado. Por favor inicia sesión de nuevo.');
+        } else {
+          alert('No se pudo agregar el producto. Intenta más tarde.');
+        }
+      }
+    });
+  }
  
 
 }
