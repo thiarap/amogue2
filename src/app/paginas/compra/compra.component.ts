@@ -31,6 +31,7 @@ export class CompraComponent implements OnInit {
   // Indica si se está procesando la compra para evitar doble envío.
   cargando = false;
 
+
   constructor(
     // Servicio que administra los datos del carrito (observable reactivo carrito$).
     private carritoService: CarritoService,
@@ -40,7 +41,7 @@ export class CompraComponent implements OnInit {
 
     // Router para navegar hacia el ticket luego de realizar la compra.
     private router: Router
-  ) {}
+  ) { }
 
   // Se ejecuta al iniciar el componente.
   ngOnInit(): void {
@@ -101,7 +102,7 @@ export class CompraComponent implements OnInit {
           this.router.navigate(['/ticket', res.id_compra]);
         }, 1000);
       },
-
+      
       // Si hubo error en el proceso:
       error: err => {
         console.error(err);
